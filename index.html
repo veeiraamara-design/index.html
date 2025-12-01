@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuteShop Kawaii Edition</title>
+
+    <!-- FONT KAWAII -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { 
+            font-family: 'Quicksand', sans-serif; 
+            background:#FFEBF3; 
+            color:#444;
+        }
+
+        /* Navbar */
+        .navbar {
+            display:flex; justify-content:space-between; align-items:center;
+            padding:20px; background:white; 
+            border-bottom:4px solid #FFC7DA;
+            position:sticky; top:0; z-index:100;
+        }
+        .navbar h1 { 
+            color:#FF6FAE; font-size:30px; 
+            letter-spacing:1px; font-weight:700; 
+        }
+        .nav-links a {
+            margin:0 12px; text-decoration:none; 
+            color:#555; font-weight:600;
+            transition:0.2s;
+        }
+        .nav-links a:hover { color:#FF6FAE; }
+
+        /* Hero */
+        .hero {
+            text-align:center; padding:60px 20px;
+            background:linear-gradient(135deg,#FFD9EC,#FFEAF3,#FFDDF8);
+            color:#ff5fa8;
+        }
+        .hero h1 { font-size:42px; margin-bottom:10px; }
+        .hero p { font-size:18px; color:#ff89bd; }
+
+        /* Search */
+        .search-box {
+            margin:30px auto; width:90%; max-width:500px; display:flex;
+        }
+        .search-box input {
+            width:100%; padding:14px; border:2px solid #FF8DC7; 
+            border-radius:12px 0 0 12px; font-size:15px;
+        }
+        .search-box button {
+            padding:14px 20px; background:#FF8DC7; border:none;
+            color:white; font-weight:600; border-radius:0 12px 12px 0;
+            cursor:pointer; transition:0.2s;
+        }
+        .search-box button:hover { background:#ff6fb4; }
+
+        /* Categories */
+        .categories { padding:40px 20px; text-align:center; }
+        .categories h2 { margin-bottom:25px; color:#FF6FAE; }
+        .category-list {
+            display:flex; justify-content:center; gap:20px; flex-wrap:wrap;
+        }
+        .category-item {
+            background:white; padding:18px 25px; border-radius:20px;
+            box-shadow:0 5px 12px rgba(255, 150, 180, 0.25);
+            cursor:pointer; font-weight:600; color:#FF6FAE;
+            transition:0.2s;
+        }
+        .category-item:hover { 
+            transform:scale(1.07); 
+            background:#FFE6F3;
+        }
+
+        /* Products */
+        .products { padding:40px 20px; text-align:center; }
+        .product-list {
+            display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:20px; padding:20px;
+        }
+        .product {
+            background:white; padding:15px; border-radius:25px;
+            box-shadow:0 5px 15px rgba(255, 150, 180, 0.25);
+            transition:0.25s;
+        }
+        .product:hover { transform:scale(1.05); }
+        .product img { width:100%; border-radius:20px; }
+        .product h3 { margin:10px 0; color:#FF6FAE; font-weight:700; }
+        .product button {
+            width:100%; background:#FF8DC7; padding:10px; border:none;
+            color:white; font-weight:600; border-radius:15px; cursor:pointer;
+            transition:0.2s;
+        }
+        .product button:hover { background:#ff6fb4; }
+
+        /* Promo Banner */
+        .promo {
+            background:#FFF6C9;
+            padding:40px 20px; margin:40px 0;
+            text-align:center; border-radius:25px;
+            border:2px dashed #FFD26F;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background:white; padding:40px 20px; text-align:center;
+            border-top:4px solid #FF8DC7;
+        }
+        .newsletter input {
+            padding:12px; width:250px; border:2px solid #FF8DC7; 
+            border-radius:15px;
+        }
+        .newsletter button {
+            padding:12px 20px; background:#FF8DC7; border:none; color:white;
+            border-radius:15px; cursor:pointer; margin-left:8px;
+        }
+
+        /* Footer */
+        footer {
+            padding:20px; text-align:center; background:white; margin-top:20px;
+            font-size:14px; color:#777;
+            border-top:4px solid #FFC7DA;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>🐰 CuteShop</h1>
+        <div class="nav-links">
+            <a href="#">Beranda</a>
+            <a href="#">Kategori</a>
+            <a href="#">Produk</a>
+            <a href="#">Keranjang</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>Selamat Datang di CuteShop! 🎀</h1>
+        <p>Toko aksesoris pastel-kawaii yang bikin mood kamu naik ✨</p>
+    </div>
+
+    <!-- Search -->
+    <div class="search-box">
+        <input type="text" placeholder="Cari aksesoris kawaii...">
+        <button>Cari</button>
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+        <h2>🌸 Kategori Populer</h2>
+        <div class="category-list">
+            <div class="category-item">Gantungan Kunci</div>
+            <div class="category-item">Stiker</div>
+            <div class="category-item">Scrunchie</div>
+            <div class="category-item">Pouch</div>
+        </div>
+    </div>
+
+    <!-- Products -->
+    <div class="products">
+        <h2>✨ Produk Terlaris</h2>
+        <div class="product-list">
+
+            <div class="product">
+                <img src="https://i.ibb.co/0JmwpRC/cute-keychain.jpg">
+                <h3>Keychain Bunny</h3>
+                <p>Rp 12.000</p>
+                <button>Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product">
+                <img src="https://i.ibb.co/7rGJWx4/cute-scrunchie.jpg">
+                <h3>Scrunchie Pastel</h3>
+                <p>Rp 8.000</p>
+                <button>Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product">
+                <img src="https://i.ibb.co/tJpSspq/cute-pouch.jpg">
+                <h3>Pouch Kawaii</h3>
+                <p>Rp 25.000</p>
+                <button>Tambah ke Keranjang</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Promo Banner -->
+    <div class="promo">
+        <h2>🎁 Promo Spesial!</h2>
+        <p>Beli 3 produk, gratis 1 hadiah random super kawaii ✨</p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+        <h2>Dapatkan Promo & Rilis Baru 🌈</h2>
+        <input type="email" placeholder="Masukkan email kamu">
+        <button>Subscribe</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 CuteShop — Toko Aksesoris Pastel Kawaii 🎀
+    </footer>
+
+</body>
+</html>
